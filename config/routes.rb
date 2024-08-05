@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      namespace :admin do
+        resources :providers
+      end
       resources :users, only: [] do
         collection do
           get :profile
